@@ -4,7 +4,7 @@ import axios from 'axios'
 // import { useParams } from 'react-router-dom'
 // import { getRandomSuper } from '../lib/api'
 
-import img from '/Users/hugokinahan/development/PROJECTS/project-2/src/assets/marvel_superheroes.jpg'
+// import img from '/Users/hugokinahan/development/PROJECTS/project-2/src/assets/marvel_superheroes.jpg'
 
 function SuperheroRandom() {
   
@@ -46,10 +46,12 @@ function SuperheroRandom() {
       setScore(score + 1)
     } else {
       setCompScore(compScore + 1)
-    }
-    console.log(playerHasWon)
+    } 
     setChoice(e.target.value)
   }
+
+  const playerWinningScore = score > 4
+  const computerWinningScore = compScore > 4
 
 
   return (
@@ -59,12 +61,19 @@ function SuperheroRandom() {
       <div className="section">
         <div>
           {(!randomPlayerSuper) ?
-            <button className="start-game" onClick={pickSupers}>Start Game</button>
+            <div className="start-features">
+              <h1>Superhero Showdown</h1>
+              <h4>Instructions here</h4>
+              <button className="start-game" onClick={pickSupers}>Start Game</button>
+            </div>
             :
             <section className="game-area">
+              <h1>Superhero Showdown</h1>
               <div className="scores">
                 <h3>Player Score: {score}</h3>
+                {playerWinningScore && <h2>🦸‍♂️ Congratulations, you win! 🦸‍♀️</h2>}
                 <h3>Computer Score: {compScore}</h3>
+                {computerWinningScore && <h2>🦹‍♀️ You lost! 🦹‍♂️</h2> }
               </div>
               <div className="container">
                 <div className="player-superhero">
@@ -88,7 +97,7 @@ function SuperheroRandom() {
                   <button value="combat">Combat: {choice ? `${randomComputerPlayer.powerstats.combat}` : '' }</button>
                 </div> 
               </div>
-              <button onClick={pickSupers} disabled={!choice} className="next-button">Next Round</button>
+              <button onClick={pickSupers} disabled={!choice, playerWinningScore, computerWinningScore} className="next-button">Next Round</button>
             </section>
           }
         </div>
