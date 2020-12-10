@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-family: avenir;
+}
+
+// .superhero-v-superhero {
+//   background-image: url('https://news.iium.edu.my/wp-content/uploads/2019/10/marvel_superheroes.jpg')
+// }
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.player-superhero {
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+}
+
+.computer-superhero {
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  // opacity: 0.8;
+}
+
+button {
+  width: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 70px;
+  padding: 5px;
+
+}
+
+.throwaway {
+  
+}
