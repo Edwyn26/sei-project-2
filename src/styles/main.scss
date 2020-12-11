@@ -53,7 +53,7 @@ h1 {
 }
 
 h2, h3 {
-  color: black;
+  color: white;
   font-family: 'Bungee', cursive;
 }
 
@@ -64,16 +64,16 @@ h2, h3 {
 }
 
 .game-area {
-  background-image: url('https://t4.ftcdn.net/jpg/02/76/64/63/360_F_276646305_WDMuciGs0FvknNb3HS0TNm8scLg8Wkps.jpg');
+  background-image: url('../assets/versus-comic-book-background-vector-23674342.jpg');
   background-size: cover;
   background-position: center;
   height: 900px;
 }
 
 .player-superhero {
-  background-color: rgb(110, 246, 252);
+  background-color: none;
   text-align: center;
-  border: 1px solid black;
+  border: 10px solid yellow;
   border-radius: 10px;
   width: 300px;
   margin-top: -50px;
@@ -82,17 +82,17 @@ h2, h3 {
 }
 
 #root > div > section > div > div > section > div.container > div.player-superhero > h2 {
-  color: rgb(254, 10, 1);
+  color: yellow;
 }
 
 #root > div > section > div > div > section > div.container > div.computer-superhero > h2 {
-  color: rgb(110, 246, 252);
+  color: yellow;
 }
 
 .computer-superhero {
-  background-color: rgb(254, 10, 1);
+  background-color: none;
   text-align: center;
-  border: 1px solid black;
+  border: 10px solid yellow;
   border-radius: 10px;
   width: 300px;
   margin-top: -50px;
@@ -142,9 +142,10 @@ button {
   
   .start-features {
     text-align: center;
-    background-image: url('https://t4.ftcdn.net/jpg/02/76/64/63/360_F_276646305_WDMuciGs0FvknNb3HS0TNm8scLg8Wkps.jpg');
+    background-image: url('../assets/versus-comic-book-background-vector-23674342.jpg');
     background-size: cover;
     overflow: hidden;
+    height: 1200px;
   }
   
   .instructions {
@@ -160,7 +161,7 @@ button {
   .start-game {
     margin: 0 auto;
     margin-top: -300px;
-    margin-left: 900px;
+    margin-left: 1100px;
     width: 130px;
     border-radius: 10px;
     text-align: center;
@@ -170,5 +171,12 @@ button {
     color: rgb(8, 141, 245);
     background-color: yellow;
     font-family: bangers;
+  }
+
+  .game-area {
+    background-image: url('../assets/versus-comic-book-background-vector-23674342.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 1200px;
   }
 }
