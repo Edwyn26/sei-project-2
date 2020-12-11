@@ -4,7 +4,7 @@ import axios from 'axios'
 // import { useParams } from 'react-router-dom'
 // import { getRandomSuper } from '../lib/api'
 
-// import img from '/Users/hugokinahan/development/PROJECTS/project-2/src/assets/marvel_superheroes.jpg'
+//import img from '/Users/hugokinahan/development/PROJECTS/project-2/src/assets/marvel_superheroes.jpg'
 
 function SuperheroRandom() {
   
@@ -37,6 +37,9 @@ function SuperheroRandom() {
     getData()
   }, [])
 
+  const reloadPage = () => {
+    window.location.reload()
+  }
 
   const playGame = e => {
     const playerScore =  randomPlayerSuper.powerstats[e.target.value]
@@ -97,7 +100,8 @@ function SuperheroRandom() {
                   <button value="combat">Combat: {choice ? `${randomComputerPlayer.powerstats.combat}` : '' }</button>
                 </div> 
               </div>
-              <button onClick={pickSupers} disabled={!choice, playerWinningScore, computerWinningScore} className="next-button">Next Round</button>
+              <button onClick={pickSupers} disabled={!choice || playerWinningScore || computerWinningScore} className="next-button">Next Round</button>
+              <button onClick={reloadPage} className="restart-button">Restart Game</button>
             </section>
           }
         </div>
