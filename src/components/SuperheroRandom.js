@@ -69,21 +69,21 @@ function SuperheroRandom() {
               <h4 className="instructions">Superhero Showdown is a race to 5 points. 
                 <br/>
                 <br/>
-                Each round you will be given a random superhero and you must click on the attribute you believe will have a higher score than the reciprocal attribute of the computer&apos;s superhero. 
+                Each round you will be given a random superhero and you must click on the attribute you believe will have a higher score than the equivalent attribute of the computer&apos;s superhero. 
                 <br/>
+                Each correct answer will score you 1 point. 
                 <br/>
-                Each correct answer will score you 1 point. Why be a hero when you can be a superhero?</h4>
+                Why be a hero when you can be a superhero?</h4>
               <button className="start-game" onClick={pickSupers}>Start Game</button>
-              <img src="url('https://news.iium.edu.my/wp-content/uploads/2019/10/marvel_superheroes.jpg')" />
             </div>
             :
             <section className="game-area">
               <h1>Superhero Showdown</h1>
               <div className="scores">
                 <h3>Player Score: {score}</h3>
-                {playerWinningScore && <h2>🦸‍♂️ Congratulations, you win! You won in the arena now go and prove your powers🦸‍♀️</h2>}
+                {playerWinningScore && <h2>🦸‍♂️ Congratulations, you win! You won in the arena now go and prove your powers 🦸‍♀️</h2>}
+                {computerWinningScore && <h2>🦹‍♀️ You lost! Time to hang up your cape... 🦹‍♂️</h2> }
                 <h3>Computer Score: {compScore}</h3>
-                {computerWinningScore && <h2>🦹‍♀️ You lost! Time to hang up your cape...🦹‍♂️</h2> }
               </div>
               <div className="container">
                 <div className="player-superhero">
