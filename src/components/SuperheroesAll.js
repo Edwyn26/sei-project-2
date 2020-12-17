@@ -1,10 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 
+
 function SuperheroesAll() {
-
   const [superheroes, setSuperheroes] = React.useState(null)
-
   React.useEffect(() => {
     const getData = async () => {
       try {

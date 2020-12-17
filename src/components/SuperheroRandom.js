@@ -1,26 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import axios from 'axios'
-
 function SuperheroRandom() {
-  
   const [superheroes, setSuperheroes] = React.useState('')
-
   const [choice, setChoice] = React.useState('')
-
   const [score, setScore] = React.useState(0)
   const [compScore, setCompScore] = React.useState(0)
-  
   const [randomPlayerSuper, setRandomPlayerSuper] = React.useState(null)
   const [randomComputerPlayer, setRandomComputerSuper] = React.useState(null)
-
   const pickSupers = () => {
     setRandomPlayerSuper(superheroes[Math.floor(Math.random() * superheroes.length)])
     setRandomComputerSuper(superheroes[Math.floor(Math.random() * superheroes.length)])
     setChoice('')
   }
-
-
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -32,11 +24,9 @@ function SuperheroRandom() {
     }
     getData()
   }, [])
-
   const reloadPage = () => {
     window.location.reload()
   }
-
   const playGame = e => {
     const playerScore =  randomPlayerSuper.powerstats[e.target.value]
     const computerScore = randomComputerPlayer.powerstats[e.target.value]
@@ -48,13 +38,9 @@ function SuperheroRandom() {
     } 
     setChoice(e.target.value)
   }
-
   const playerWinningScore = score > 4
   const computerWinningScore = compScore > 4
-
-
   return (
-
     <section className="superhero-v-superhero">
       <div className="section">
         <div>
@@ -111,5 +97,4 @@ function SuperheroRandom() {
     </section>
   )
 }
-
 export default SuperheroRandom
