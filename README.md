@@ -159,9 +159,9 @@ const [superheroes, setSuperheroes] = React.useState('')
 
 # Key Learnings
 
-This was my first pair project, and overall the dynamic worked well producing an application we were proud of. 
+This was my first pair project, and overall the dynamic worked well producing an application we were proud of. Reflecting on the 48 hour project, it certainly had its ups and downs in the period but from it I would say that we could of been a bit more productive by delegating tasks than using the time to collaborate a bit much on screen-sharing. This, although only natural after just under 2 weeks of React, it was a key learning experience in how to manage tasks and operate in future projects to come.
 
-One aspect that I would improve for the next group or pair project is the delegation of different tasks. In my opinion we spent too much time screen-sharing on the same tasks when these could have easily been delegated, allowing us more time to add more features to our finished application. 
+
 
 # Future Features
 
