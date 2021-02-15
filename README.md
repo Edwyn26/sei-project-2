@@ -1,7 +1,7 @@
 # Project 2: Superhero Showdown
 
 
-# Brief
+## Brief
 
 For our second project at GA ‘Reactathon’, we were expected to build a React.js app using a 3rd party API, which was to be pair coded in 48 hours.
 
